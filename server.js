@@ -3,7 +3,8 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
+
 
 // Enable CORS
 app.use(cors());
@@ -22,6 +23,6 @@ app.get("/api/message", (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Server running at ${port}`);
 });
