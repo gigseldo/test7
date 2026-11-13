@@ -24,6 +24,7 @@ app.use(express.json());
 
 // Serve the website from the "public" folder
 //app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 // Simple API endpoint
 app.get("/api/message", (req, res) => {
